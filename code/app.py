@@ -5,8 +5,8 @@ print("--- RAKSHA SAFETY STARTED ---")
 
 # 1. YE HAMARA NAKLI DATABASE HAI. ASLI ME YE GOOGLE SHEET SE AAYEGA
 users = {
-    "6201234567": {"name": "Chandan", "wake_time": "6:00 AM", "status": "Late Uthta hai"},
-    "6209876543": {"name": "Rahul", "wake_time": "5:30 AM", "status": "Time par uth jata hai"}
+    "7739285002": {"name": "Chandan", "wake_time": "6:00 AM", "status": "Late Uthta hai"},
+    "9031721575": {"name": "knjha", "wake_time": "5:30 AM", "status": "Time par uth jata hai"}
 }
 
 # 2. YE FUNCTION MOBILE NO CHECK KAREGA
