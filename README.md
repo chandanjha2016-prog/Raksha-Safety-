@@ -17,6 +17,7 @@
 
 ### Kaise Chalaye?
 `python app.py`
+
 Chandan Jha
 Founder, Raksha Safety - AI Subah Coach
 Jamalpur, Munger, Bihar
