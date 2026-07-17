@@ -21,6 +21,6 @@
 Chandan Jha
 Founder, Raksha Safety - AI Subah Coach
 Jamalpur, Munger, Bihar
-Email: aapka-email@gmail.com
-GitHub: github.com/aapka-naam/raksha-safety
+Email: chandanjha2016@gmail.com
+GitHub: github.com/chandanjha2016-prog/raksha-safety
 "AI se har subah behtar"
