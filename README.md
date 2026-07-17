@@ -17,3 +17,9 @@
 
 ### Kaise Chalaye?
 `python app.py`
+Chandan Jha
+Founder, Raksha Safety - AI Subah Coach
+Jamalpur, Munger, Bihar
+Email: aapka-email@gmail.com
+GitHub: github.com/aapka-naam/raksha-safety
+"AI se har subah behtar"
