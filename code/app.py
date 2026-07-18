@@ -1,33 +1,38 @@
-# RAKSHA SAFETY - AI SUBAH COACH
-import datetime
+import pandas as pd
+from datetime import datetime
 
-print("--- RAKSHA SAFETY STARTED ---")
+print("RAKSHA SAFETY - 10 USERS MVP REPORT")
+print("="*50)
 
-# 1. YE HAMARA NAKLI DATABASE HAI. ASLI ME YE GOOGLE SHEET SE AAYEGA
-users = {
-    "7739285002": {"name": "Chandan", "wake_time": "6:00 AM", "status": "Late Uthta hai"},
-    "9031721575": {"name": "knjha", "wake_time": "5:30 AM", "status": "Time par uth jata hai"}
-}
+# STEP 1: YAHAN SIRF 10 MOBILE NO DAAL DO
+users_data = [
+    {"name": "Chandan", "number": "6201234567", "habit": "Late Uthta hai"},
+    {"name": "seema", "number": "9876543210", "habit": "Time par sota hai"},
+    {"name": "sweta", "number": "9123456780", "habit": "Exam ki tension"},
+    {"name": "sucheta", "number": "9988776655", "habit": "Job interview hai"},
+    {"name":  "pinky ", "number": "9012345678", "habit": "Health ka dhyan nahi"},
+    {"name": "Mona", "number": "7890123456", "habit": "Subah padhai karta hai"},
+    {"name": "Barsha", "number": "7654321098", "habit": "Late soti hai"},
+    {"name": "Naina", "number": "6543210987", "habit": "Gym jata hai"},
+    {"name": "Durga", "number": "5432109876", "habit": "Competition ki taiyari"},
+    {"name": "Dolly", "number": "4321098765", "habit": "Kisan ka beta"}
+]
 
-# 2. YE FUNCTION MOBILE NO CHECK KAREGA
-def send_morning_alert(mobile_no):
-    today = datetime.date.today()
+# STEP 2: AI LOGIC - Har ek ko message bhejo
+report = []
+for user in users_data:
+    time_now = datetime.now().strftime("%H:%M")
+    message = f"Good Morning {user['name']}! ⏰\nAaj ka target: 6:00 AM par uthna hai.\nNote: {user['habit']}"
     
-    if mobile_no in users:
-        user = users[mobile_no]
-        message = f"Good Morning {user['name']}! ⏰\nAaj ka target: {user['wake_time']} par uthna hai.\nNote: {user['status']}\n\n- Raksha Safety AI"
-        print(f"📱 {mobile_no} ko WhatsApp bheja gaya:")
-        print(message)
-        print(f"Date: {today}\n")
-    else:
-        print(f"📱 {mobile_no} - Ye number database me nahi hai. Pehle Google Form bharwao.")
+    print(f"\nTo: {user['number']}")
+    print(f"Message: {message}")
+    print("-"*30)
+    
+    report.append([user['name'], user['number'], user['habit'], "Message Sent", time_now])
 
-# 3. TEST KARO - APNA NO YAHAN DAALO
-print("Test 1: Apna No")
-send_morning_alert("7739285002")
+# STEP 3: MVP REPORT CSV BAN GAYI
+df = pd.DataFrame(report, columns=["Name", "Number", "Habit", "Status", "Time"])
+df.to_csv("mvp_report_10_users.csv", index=False)
 
-print("Test 2: Dusra No")
-send_morning_alert("9031721575")
-
-print("Test 3: Naya No")
-send_morning_alert("6201167980")
+print("\n✅ MVP REPORT READY: mvp_report_10_users.csv")
+print("✅ 10 LOGON KO MESSAGE SIMULATE HO GAYA")
